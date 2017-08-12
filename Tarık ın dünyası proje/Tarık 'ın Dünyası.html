@@ -65,9 +65,8 @@
         background-color: cornflowerblue;
     }
 
-    input 
-     {
-        float: right;
+    input {
+        float: left;
 
         font-family: system-ui;
         font-size: 25px;
@@ -75,7 +74,7 @@
         display: block;
     }
 
-    
+
 
     h1,
     h2 {
@@ -84,6 +83,14 @@
         text-align: center;
         font-size: 30px;
     }
+
+    .sagKoseInput {
+        float: right;
+        font-family: system-ui;
+        font-size: 25px;
+        padding-right: 10px;
+        display: block;
+    }
 </style>
 
 <body>
@@ -91,8 +98,8 @@
         <li><a href="#ilkokul"> İlkokul</a></li>
         <li><a href="#Lise">Lise</a></li>
         <li><a href="#Üniversite">Üniversite</a></li>
-        <br><input type="submit" id="arama" value="Ara">
-        <input type="text" id="#3" name="search" placeholder="Sözcük Giriniz">
+        <br><input type="submit" class="sagKoseInput" value="Ara">
+        <input type="text" class="sagKoseInput" name="search" placeholder="Sözcük Giriniz">
 
     </ul>
 
@@ -112,7 +119,7 @@
     <form action="/action_page.php">
         <fieldset>
             <legend>Kişisel Bilgiler:</legend>
-            <input type="text" id="#4" name="lastname" value="">
+            <input type="text"  name="lastname" value="">
         </fieldset>
 
     </form>
