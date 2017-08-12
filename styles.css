@@ -1,0 +1,30 @@
+table {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+border-collapse: collapse; width: 100%;
+
+}
+
+table, td, th {
+border:1px solid orange;
+text-align: left;
+padding: 8px;
+border-spacing: 5px
+}
+
+tr:nth-child(even) {
+    background-color: greenyellow;
+}
+
+table#t01 {
+
+    width:50%;
+    background-color:white;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color:blue;
+}
+table#t01 th {
+    background-color: black;
+    color:white;
+}

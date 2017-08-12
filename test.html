@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Web Page</title>
+</head>
+
+<body>
+
+
+    <img id="resim1" height="100" width="100" src="./resimler/DerbyshireSheep_EN-US8298134447_1920x1200.jpg" />
+    <br>
+    <button onclick="YukseklikDegistir()">Yükseklik Değiştir</button>
+
+    <br/>
+    <input type="text" id="resimNumarasi">
+    <button onclick="resimDegistirDinamik()">Resmi Değiştir</button>
+
+
+
+
+
+    <script>
+        function YukseklikDegistir() {
+            var resimElemani = document.getElementById("resim1");
+
+            if (resimElemani.height === 500) {
+                resimElemani.height = 100;
+                resimElemani.width = 100;
+            } else {
+                resimElemani.height = 500;
+                resimElemani.width = 200;
+            }
+        }
+
+        var deger = 1;
+
+        function ResmiDegistir() {
+            var resimNumarasi = parseInt(document.getElementById("resimNumarasi").value);
+            var resim = document.getElementById("resim1");
+
+            switch (resimNumarasi) {
+                case 1://bursa
+                    resim.src = "./resimler/75170bursa-merkezinden-gece-gorunumu.png";
+                    break;
+
+                case 2://ankara
+                    resim.src = "./resimler/Ankara-1.jpg";
+                    break;
+
+                default://sheep
+                    resim.src = "./resimler/DerbyshireSheep_EN-US8298134447_1920x1200.jpg";
+                    break;
+            }
+        }
+
+        function resimDegistirDinamik() {
+            var resimElemani = document.getElementById("resim1");
+
+            var mod = deger % 4;
+
+            console.log("değer: " + deger);
+            console.log("naber");
+            switch (mod) {
+                case 1://bursa
+                    resimElemani.src = "./resimler/75170bursa-merkezinden-gece-gorunumu.png";
+                    break;
+
+                case 2://ankara
+                    resimElemani.src = "./resimler/Ankara-1.jpg";
+                    break;
+
+                case 3://sheep
+                    resimElemani.src = "./resimler/3-8.1.jpg";
+                    break;
+
+                default://sheep
+                    resimElemani.src = "./resimler/html5.gif";
+                    break;
+            }
+            console.log("Resim yolu :" + resimElemani.src);
+            console.log("-------------------------------------");
+            deger = deger + 1;
+        }
+
+    //image elementinin resim yüksekliğini genişliğini ve src sini değiştiren kodları yazalım
+    </script>
+
+
+</body>
+
+</html>

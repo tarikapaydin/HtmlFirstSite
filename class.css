@@ -1,0 +1,11 @@
+div.cities {
+    background-color: pink;
+    color:orangered;
+    margin: 20px 0 20px 0;
+    padding:20px;
+}
+
+span.note {
+    font-size: 120%;
+    color:brown;
+}

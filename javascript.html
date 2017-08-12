@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Naber</title>
+</head>
+<body>
+
+    <p>JavaScript can change the content of an HTML element:</p>
+    <button type="button" onclick="myFunction()">Tıkla!</button>
+    <p id="deneme">Bu bir demonstrasyondur.</p>
+
+
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+    <button type="button" onclick="fonk()">!tıkla bene kardaş!</button>
+    <br>
+    <br>
+
+    <img id="myImage" src="./resimler/pic_bulboff.gif" width="100" height="180">
+    <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+
+
+    <p id="demos"></p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("deneme").innerHTML = "Merhaba Java Script!";
+        }
+
+        document.getElementById("demos").innerHTML = "Merhaba Tarık!";
+
+        function fonk() {
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+
+        }
+
+        function light(sw) {
+            var pic;
+            if (sw === 0) {
+                pic = "./resimler/pic_bulboff.gif"
+            }
+            else {
+                pic = "./resimler/pic_bulbon.gif"
+            }
+
+            document.getElementById("myImage").src = pic;
+        }
+    </script>
+    <noscript>
+        maalesef sizin tarayıcınız java script'i desteklemiyor.
+    </noscript>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My little</title>
+</head>
+<style>
+    div.icerik {
+        width: 100%;
+        border: 1px solid blueviolet;
+    }
+
+    header,
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: black;
+        clear: left;
+        text-align: center;
+    }
+
+    nav {
+        float: left;
+        max-width: 160px;
+        margin: 0;
+        padding: 1em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul a {
+        text-decoration: none;
+    }
+
+    article {
+        margin-left: 170px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>Şehir Galerisi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" onclick="resimDegistir(1)">Ankara</a>
+
+            </li>
+            <li><a href="#" onclick="resimDegistir(2)">Bursa</a></li>
+            <li><a href="#">İzmir</a></li>
+        </ul>
+    </nav>
+
+    <div class="icerik">
+
+
+        <article id="metin">
+            <img id="sehirResmi" height="100" width="100" />
+            <h1>Ankara</h1>
+            <p> Ankara is the capital city of Turkey. It is the most populous city in the Anatolia, with a metropolitan area
+                of over 13 million inhabitants.</p>
+            <p>Standing on the Sıhhıye, Ankara has been a major settlement for two millennia, its history going back to its
+                founding by the Ottomans, who named it Ankura.</p>
+
+
+        </article>
+
+
+        <footer>
+            Copyright &copy;W3Schools.com
+        </footer>
+
+    </div>
+
+    <script>
+        function resimDegistir(resimNo) {
+fetch("tarik.com/resimgetir/"+resimNo);
+
+            var resimElemani = document.getElementById("sehirResmi");
+
+            switch (resimNo) {
+                case 1://ankara
+                    resimElemani.src = "./resimler/Ankara-1.jpg";
+                    break;
+                case 2://bursa
+                    resimElemani.src = "./resimler/75170bursa-merkezinden-gece-gorunumu.png";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

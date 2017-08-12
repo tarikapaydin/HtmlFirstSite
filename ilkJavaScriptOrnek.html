@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB SİTEM</title>
+</head>
+
+
+<body>
+
+    <div id="home" style="background-color: cornflowerblue">
+        lşöç.öç..ö.çö.çö.çö.ö:::::.:::::::<br/>
+        <p>
+            Şeffaflık Beyanı Destek Bilgi tabanı (İngilizce) TeamViewer Community TeamViewer Academy Ticket Gönder Belgeler Videolar
+            Değişiklik günlüğü Daha fazla ürün Blizz ITbrain Monitis Mevcut Karşıdaki Kişiler İş Ortağı Bul Yetkili bir İş
+            Ortağı Olun Kaldır Baskı Gizlilik Politikası EULA Site haritası Facebook icon Twitter icon Google Plus icon LinkedIn
+            icon Bu web sitesi ek sosyal medya fonksiyonları, istatistiksel analiz ve seçilmiş üçüncü taraf servisleri üzerinden</p>
+    </div>
+
+    <button onclick="SariYap()";>Rengi Değiştir</button>
+    <button onclick="KirmiziYap()">Fontu Büyüt/Küçült</button>
+    <br/>
+    <br/><br/>
+
+
+
+
+
+
+    <input type="text" id="sayi1" /><br/>
+    <input type="text" id="sayi2" /><br/>
+    <button onclick="ikisinitopla()">Toplama yap</button><br/>
+    <label id="lblSonuc">Sonuç burada gözükecek</label>
+
+
+    <script>
+        function ikisinitopla() {
+            var sayi1 = parseInt(document.getElementById("sayi1").value);
+            var sayi2 = parseInt(document.getElementById("sayi2").value);
+
+            document.getElementById("lblSonuc").innerHTML = (sayi1 / sayi2).toString();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function SariYap() {
+            var divElemani = document.getElementById("home");
+            if (divElemani.style.backgroundColor === "yellow") {
+                divElemani.style.backgroundColor = "white";
+
+            } else {
+                divElemani.style.backgroundColor = "yellow";
+
+            }
+
+        }
+
+        function KirmiziYap() {
+            var divbirseyi = document.getElementById("home");
+            if (divbirseyi.style.fontSize === "50px") {
+                divbirseyi.style.fontSize = "16px";
+            } else {
+                divbirseyi.style.fontSize = "50px";
+            }
+        }
+
+        function ToplamaYap25() {
+            var sayi1kontrolu = document.getElementById("sayi1");
+            var sayi1 = parseInt(sayi1kontrolu.value);
+
+            var toplam = 50 * sayi1;
+            var lblSonuc = document.getElementById("lblSonuc");
+            lblSonuc.innerHTML = toplam.toString();
+        }
+    </script>
+
+</body>
+
+</html>
